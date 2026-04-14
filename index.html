@@ -173,6 +173,7 @@
       text-transform: uppercase;
       color: var(--teal);
       margin-bottom: 12px;
+      text-align: center;
     }
 
     h2 {
@@ -181,6 +182,7 @@
       color: var(--navy);
       margin-bottom: 32px;
       letter-spacing: -0.02em;
+      text-align: center;
     }
 
     /* CONTACT CARD */
@@ -411,7 +413,7 @@
           <h3>Have a question?</h3>
           <p>Send us an email and we'll get back to you. We typically respond within 1–2 business days.</p>
         </div>
-        <div class="contact-email-display">✉ lowlabs.dev@gmail.com</div>
+        <div class="contact-email-display">✉ <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="563a39213a3734257832332016313b373f3a7835393b">[email&#160;protected]</a></div>
       </div>
     </section>
 
@@ -464,10 +466,10 @@
   </main>
 
   <footer>
-    <p>© 2026 Equator &nbsp;·&nbsp; <span>lowlabs.dev@gmail.com</span></p>
+    <p>© 2026 Equator &nbsp;·&nbsp; <span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="2d41425a414c4f5e0349485b6d4a404c4441034e4240">[email&#160;protected]</a></span></p>
   </footer>
 
-  <script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
     // FAQ toggle
     function toggleFaq(btn) {
       const item = btn.closest('.faq-item');
@@ -501,20 +503,3 @@
           if (line.startsWith('### ')) return `<h3>${line.slice(4)}</h3>`;
           if (line.startsWith('- '))  return `<li>${inline(line.slice(2))}</li>`;
           if (line.trim() === '')     return '<br>';
-          return `<p>${inline(line)}</p>`;
-        })
-        .join('\n')
-        .replace(/(<li>.*<\/li>\n?)+/g, match => `<ul>${match}</ul>`);
-    }
-
-    function inline(text) {
-      return text
-        .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
-        .replace(/\*(.+?)\*/g, '<em>$1</em>');
-    }
-
-    loadPrivacyPolicy();
-  </script>
-
-</body>
-</html>
