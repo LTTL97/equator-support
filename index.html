@@ -218,7 +218,7 @@
       max-width: 320px;
     }
 
-    .contact-email {
+    .contact-email-display {
       display: inline-flex;
       align-items: center;
       gap: 8px;
@@ -228,14 +228,7 @@
       font-size: 0.95rem;
       padding: 14px 24px;
       border-radius: 100px;
-      text-decoration: none;
       white-space: nowrap;
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-
-    .contact-email:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(46,196,182,0.3);
     }
 
     /* FAQ */
@@ -368,6 +361,11 @@
       font-weight: 700;
     }
 
+    .policy-email {
+      color: var(--teal);
+      font-weight: 600;
+    }
+
     /* FOOTER */
     footer {
       background: var(--navy);
@@ -377,9 +375,8 @@
       font-size: 0.85rem;
     }
 
-    footer a {
+    footer span {
       color: var(--teal);
-      text-decoration: none;
     }
 
     /* RESPONSIVE */
@@ -428,9 +425,7 @@
     <div class="hero-badge">Equator – Expense Tracker</div>
     <h1>We're here to<br><em>help you out</em></h1>
     <p>Have a question or running into an issue? We'll get back to you as soon as we can.</p>
-    <a href="mailto:support@equatorapp.com" class="hero-cta">
-      ✉ Contact Support
-    </a>
+    <a href="#support" class="hero-cta">✉ Contact Support</a>
   </div>
 
   <main>
@@ -444,9 +439,9 @@
           <h3>Have a question?</h3>
           <p>Send us an email and we'll get back to you. We typically respond within 1–2 business days.</p>
         </div>
-        <a href="mailto:support@equatorapp.com" class="contact-email">
-          ✉ support@equatorapp.com
-        </a>
+        <div class="contact-email-display">
+          ✉ lowlabs.dev@gmail.com
+        </div>
       </div>
     </section>
 
@@ -536,32 +531,32 @@
           <p>We built Equator with strict privacy principles. We do not want your personal or financial data, and we do not have access to it.</p>
           <ul>
             <li><strong>Local Storage:</strong> All financial data is stored entirely locally on your device using Apple's native database frameworks. We do not host your data on our servers.</li>
-            <li><strong>iCloud Backup & Sync:</strong> The App provides an optional backup feature that saves JSON snapshot files to your personal Apple iCloud Drive. These backups are initiated by you and stored in your private iCloud container. We do not have access to your iCloud account.</li>
-            <li><strong>Third-Party APIs:</strong> The App connects to the internet to fetch public, live currency exchange rates. Your device's IP address may be temporarily exposed to third-party service providers. This data is never linked to your personal identity or local financial data.</li>
-            <li><strong>On-Device Intelligence:</strong> The App uses Apple's on-device machine learning frameworks for convenience features. All processing occurs entirely on your device. No data is sent to any external server.</li>
+            <li><strong>iCloud Backup:</strong> The optional backup feature saves files to your personal iCloud Drive. We do not have access to your iCloud account.</li>
+            <li><strong>Third-Party APIs:</strong> The App fetches public live currency exchange rates. Your IP address may be temporarily exposed to third-party providers. This is never linked to your personal identity or financial data.</li>
+            <li><strong>On-Device Intelligence:</strong> Machine learning features run entirely on your device. No data is sent to any external server.</li>
             <li><strong>Analytics and Tracking:</strong> We do not track your usage behaviour and we do not sell, rent, or trade any data to third parties.</li>
-            <li><strong>Children's Privacy:</strong> The App is not directed to individuals under the age of 13. We do not knowingly collect any data from children.</li>
+            <li><strong>Children's Privacy:</strong> The App is not directed to individuals under the age of 13. We do not knowingly collect data from children.</li>
           </ul>
         </div>
 
         <div class="policy-section">
-          <h4>2. Terms of Service</h4>
-          <p>The App is designed to be a personal utility for tracking your day-to-day finances and expenses. It is not a substitute for professional financial, accounting, or tax advice. The information, calculations, and summaries provided are for personal reference and convenience only. You are solely responsible for your financial decisions.</p>
+          <h4>2. Disclaimer</h4>
+          <p>Equator is a personal utility for tracking day-to-day finances and expenses. It is not a substitute for professional financial, accounting, or tax advice. All calculations and summaries are for personal reference only. You are solely responsible for your financial decisions.</p>
         </div>
 
         <div class="policy-section">
           <h4>3. Data Backup</h4>
-          <p>Because your data is stored locally on your device, you are entirely responsible for backing it up. We cannot recover lost, deleted, or corrupted data.</p>
+          <p>Your data is stored locally on your device. You are entirely responsible for backing it up. We cannot recover lost, deleted, or corrupted data.</p>
         </div>
 
         <div class="policy-section">
           <h4>4. Governing Law</h4>
-          <p>These terms shall be governed by and construed in accordance with the laws of Singapore.</p>
+          <p>These terms are governed by the laws of Singapore.</p>
         </div>
 
         <div class="policy-section">
           <h4>5. Contact</h4>
-          <p>For questions or concerns, contact us at <a href="mailto:support@equatorapp.com" style="color: var(--teal); text-decoration: none;">support@equatorapp.com</a></p>
+          <p>For questions or concerns, reach us at <span class="policy-email">lowlabs.dev@gmail.com</span></p>
         </div>
 
       </div>
@@ -570,7 +565,7 @@
   </main>
 
   <footer>
-    <p>© 2026 Equator. All rights reserved. &nbsp;·&nbsp; <a href="mailto:support@equatorapp.com">support@equatorapp.com</a></p>
+    <p>© 2026 Equator &nbsp;·&nbsp; <span>lowlabs.dev@gmail.com</span></p>
   </footer>
 
   <script>
