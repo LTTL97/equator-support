@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Equator – Support</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy: #0f1f3d;
+      --teal: #2ec4b6;
+      --teal-light: #e8f9f7;
+      --cream: #fafaf7;
+      --text: #1a2e4a;
+      --muted: #6b7f99;
+      --border: #e2e8f0;
+      --white: #ffffff;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    /* NAV */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(250, 250, 247, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 16px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.3rem;
+      color: var(--navy);
+      text-decoration: none;
+    }
+
+    .nav-logo-icon {
+      width: 32px;
+      height: 32px;
+      background: var(--navy);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--teal);
+      font-size: 1rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--navy); }
+
+    /* HERO */
+    .hero {
+      background: var(--navy);
+      color: var(--white);
+      padding: 100px 40px 80px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -100px;
+      right: -100px;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(46,196,182,0.15) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -80px;
+      left: -80px;
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, rgba(46,196,182,0.1) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: rgba(46,196,182,0.15);
+      color: var(--teal);
+      border: 1px solid rgba(46,196,182,0.3);
+      border-radius: 100px;
+      padding: 6px 16px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+
+    .hero h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      line-height: 1.15;
+      margin-bottom: 16px;
+      letter-spacing: -0.02em;
+    }
+
+    .hero h1 em {
+      font-style: italic;
+      color: var(--teal);
+    }
+
+    .hero p {
+      color: rgba(255,255,255,0.65);
+      font-size: 1.1rem;
+      max-width: 480px;
+      margin: 0 auto 40px;
+    }
+
+    .hero-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--teal);
+      color: var(--navy);
+      font-weight: 600;
+      font-size: 0.95rem;
+      padding: 14px 28px;
+      border-radius: 100px;
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .hero-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(46,196,182,0.3);
+    }
+
+    /* MAIN CONTENT */
+    main {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 80px 40px;
+    }
+
+    section {
+      margin-bottom: 80px;
+    }
+
+    .section-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 12px;
+    }
+
+    h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 2rem;
+      color: var(--navy);
+      margin-bottom: 32px;
+      letter-spacing: -0.02em;
+    }
+
+    /* CONTACT CARD */
+    .contact-card {
+      background: var(--navy);
+      border-radius: 20px;
+      padding: 48px;
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+
+    .contact-card h3 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.6rem;
+      margin-bottom: 8px;
+    }
+
+    .contact-card p {
+      color: rgba(255,255,255,0.6);
+      font-size: 0.95rem;
+      max-width: 320px;
+    }
+
+    .contact-email {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--teal);
+      color: var(--navy);
+      font-weight: 600;
+      font-size: 0.95rem;
+      padding: 14px 24px;
+      border-radius: 100px;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .contact-email:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(46,196,182,0.3);
+    }
+
+    /* FAQ */
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .faq-item {
+      background: var(--white);
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      transition: border-color 0.2s;
+    }
+
+    .faq-item:hover { border-color: var(--teal); }
+
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 22px 28px;
+      text-align: left;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--navy);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .faq-icon {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: var(--teal-light);
+      color: var(--teal);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+      transition: transform 0.25s, background 0.2s;
+    }
+
+    .faq-item.open .faq-icon {
+      transform: rotate(45deg);
+      background: var(--teal);
+      color: var(--white);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease, padding 0.25s;
+      padding: 0 28px;
+      color: var(--muted);
+      font-size: 0.95rem;
+      line-height: 1.8;
+    }
+
+    .faq-item.open .faq-answer {
+      max-height: 300px;
+      padding: 0 28px 22px;
+    }
+
+    /* PRIVACY POLICY */
+    .policy-card {
+      background: var(--white);
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      padding: 48px;
+    }
+
+    .policy-card h3 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.4rem;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+
+    .policy-meta {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-bottom: 32px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .policy-section {
+      margin-bottom: 28px;
+    }
+
+    .policy-section h4 {
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 8px;
+      font-size: 0.95rem;
+    }
+
+    .policy-section p {
+      color: var(--muted);
+      font-size: 0.9rem;
+      line-height: 1.8;
+    }
+
+    .policy-section ul {
+      list-style: none;
+      margin-top: 8px;
+    }
+
+    .policy-section ul li {
+      color: var(--muted);
+      font-size: 0.9rem;
+      padding: 6px 0 6px 20px;
+      position: relative;
+      line-height: 1.7;
+    }
+
+    .policy-section ul li::before {
+      content: '·';
+      position: absolute;
+      left: 6px;
+      color: var(--teal);
+      font-weight: 700;
+    }
+
+    /* FOOTER */
+    footer {
+      background: var(--navy);
+      color: rgba(255,255,255,0.5);
+      text-align: center;
+      padding: 40px;
+      font-size: 0.85rem;
+    }
+
+    footer a {
+      color: var(--teal);
+      text-decoration: none;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 640px) {
+      nav { padding: 16px 20px; }
+      .nav-links { display: none; }
+      .hero { padding: 72px 24px 60px; }
+      main { padding: 60px 20px; }
+      .contact-card { padding: 32px 24px; }
+      .policy-card { padding: 28px 20px; }
+      .faq-question { padding: 18px 20px; }
+      .faq-item.open .faq-answer { padding: 0 20px 18px; }
+    }
+
+    /* ANIMATIONS */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero-badge, .hero h1, .hero p, .hero-cta {
+      animation: fadeUp 0.6s ease both;
+    }
+    .hero h1 { animation-delay: 0.1s; }
+    .hero p { animation-delay: 0.2s; }
+    .hero-cta { animation-delay: 0.3s; }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#" class="nav-logo">
+      <div class="nav-logo-icon">⊕</div>
+      Equator
+    </a>
+    <ul class="nav-links">
+      <li><a href="#support">Support</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#privacy">Privacy Policy</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-badge">Equator – Expense Tracker</div>
+    <h1>We're here to<br><em>help you out</em></h1>
+    <p>Have a question or running into an issue? We'll get back to you as soon as we can.</p>
+    <a href="mailto:support@equatorapp.com" class="hero-cta">
+      ✉ Contact Support
+    </a>
+  </div>
+
+  <main>
+
+    <!-- CONTACT -->
+    <section id="support">
+      <div class="section-label">Get in touch</div>
+      <h2>Support</h2>
+      <div class="contact-card">
+        <div>
+          <h3>Have a question?</h3>
+          <p>Send us an email and we'll get back to you. We typically respond within 1–2 business days.</p>
+        </div>
+        <a href="mailto:support@equatorapp.com" class="contact-email">
+          ✉ support@equatorapp.com
+        </a>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+      <div class="section-label">Common questions</div>
+      <h2>FAQ</h2>
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Is my financial data safe?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            Yes. All your data is stored entirely on your device. We do not have servers, we do not collect your data, and we have no ability to view or access your financial information.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            How do I back up my data?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            Go to Settings, then Data & Backup. From there you can export a backup file to your iCloud Drive or any location you choose. To restore, simply import the backup file from the same screen.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            What does Equator Pro include?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            Equator Pro is a one-time purchase that unlocks the full feature set of the app. You can see exactly what is included on the upgrade screen inside the app under Settings.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            How do I restore my Pro purchase on a new device?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            Go to Settings inside the app and tap Restore Purchases. Make sure you are signed in with the same Apple ID you used to purchase Pro originally.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            What currencies does Equator support?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            Equator supports a wide range of global currencies. You can set your home currency in Settings under General, and use the built-in currency converter to check rates between any supported currencies.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            I deleted the app. Can I recover my data?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            Since all data is stored locally on your device, deleting the app permanently removes your data. We strongly recommend exporting a backup regularly via Settings before uninstalling. If you had a backup saved to iCloud Drive, you can restore it after reinstalling the app.
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PRIVACY POLICY -->
+    <section id="privacy">
+      <div class="section-label">Legal</div>
+      <h2>Privacy Policy</h2>
+      <div class="policy-card">
+        <h3>Equator: Expense Tracker</h3>
+        <p class="policy-meta">Last Updated: April 13, 2026</p>
+
+        <div class="policy-section">
+          <p>Welcome to Equator: Expense Tracker. This document governs your use of the App and outlines our privacy practices. By downloading, accessing, or using the App, you agree to be bound by these terms. If you do not agree, do not use the App.</p>
+        </div>
+
+        <div class="policy-section">
+          <h4>1. Your Data is Yours</h4>
+          <p>We built Equator with strict privacy principles. We do not want your personal or financial data, and we do not have access to it.</p>
+          <ul>
+            <li><strong>Local Storage:</strong> All financial data is stored entirely locally on your device using Apple's native database frameworks. We do not host your data on our servers.</li>
+            <li><strong>iCloud Backup & Sync:</strong> The App provides an optional backup feature that saves JSON snapshot files to your personal Apple iCloud Drive. These backups are initiated by you and stored in your private iCloud container. We do not have access to your iCloud account.</li>
+            <li><strong>Third-Party APIs:</strong> The App connects to the internet to fetch public, live currency exchange rates. Your device's IP address may be temporarily exposed to third-party service providers. This data is never linked to your personal identity or local financial data.</li>
+            <li><strong>On-Device Intelligence:</strong> The App uses Apple's on-device machine learning frameworks for convenience features. All processing occurs entirely on your device. No data is sent to any external server.</li>
+            <li><strong>Analytics and Tracking:</strong> We do not track your usage behaviour and we do not sell, rent, or trade any data to third parties.</li>
+            <li><strong>Children's Privacy:</strong> The App is not directed to individuals under the age of 13. We do not knowingly collect any data from children.</li>
+          </ul>
+        </div>
+
+        <div class="policy-section">
+          <h4>2. Terms of Service</h4>
+          <p>The App is designed to be a personal utility for tracking your day-to-day finances and expenses. It is not a substitute for professional financial, accounting, or tax advice. The information, calculations, and summaries provided are for personal reference and convenience only. You are solely responsible for your financial decisions.</p>
+        </div>
+
+        <div class="policy-section">
+          <h4>3. Data Backup</h4>
+          <p>Because your data is stored locally on your device, you are entirely responsible for backing it up. We cannot recover lost, deleted, or corrupted data.</p>
+        </div>
+
+        <div class="policy-section">
+          <h4>4. Governing Law</h4>
+          <p>These terms shall be governed by and construed in accordance with the laws of Singapore.</p>
+        </div>
+
+        <div class="policy-section">
+          <h4>5. Contact</h4>
+          <p>For questions or concerns, contact us at <a href="mailto:support@equatorapp.com" style="color: var(--teal); text-decoration: none;">support@equatorapp.com</a></p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2026 Equator. All rights reserved. &nbsp;·&nbsp; <a href="mailto:support@equatorapp.com">support@equatorapp.com</a></p>
+  </footer>
+
+  <script>
+    function toggleFaq(btn) {
+      const item = btn.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    }
+  </script>
+
+</body>
+</html>
