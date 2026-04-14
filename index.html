@@ -27,7 +27,6 @@
       line-height: 1.7;
     }
 
-    /* NAV */
     nav {
       position: sticky;
       top: 0;
@@ -79,7 +78,6 @@
 
     .nav-links a:hover { color: var(--navy); }
 
-    /* HERO */
     .hero {
       background: var(--navy);
       color: var(--white);
@@ -157,7 +155,6 @@
       box-shadow: 0 8px 24px rgba(46,196,182,0.3);
     }
 
-    /* MAIN */
     main {
       max-width: 860px;
       margin: 0 auto;
@@ -185,7 +182,6 @@
       text-align: center;
     }
 
-    /* CONTACT CARD */
     .contact-card {
       background: var(--navy);
       border-radius: 20px;
@@ -219,7 +215,6 @@
       white-space: nowrap;
     }
 
-    /* FAQ */
     .faq-list { display: flex; flex-direction: column; gap: 2px; }
 
     .faq-item {
@@ -280,7 +275,6 @@
 
     .faq-item.open .faq-answer { max-height: 300px; padding: 0 28px 22px; }
 
-    /* PRIVACY POLICY */
     .policy-card {
       background: var(--white);
       border-radius: 20px;
@@ -295,46 +289,47 @@
       font-size: 0.95rem;
     }
 
-    /* Rendered markdown styles */
     .policy-card h1 {
       font-family: 'DM Serif Display', serif;
       font-size: 1.5rem;
       color: var(--navy);
-      margin-bottom: 8px;
+      margin-bottom: 4px;
     }
 
     .policy-card h2 {
       font-family: 'DM Serif Display', serif;
-      font-size: 1.2rem;
+      font-size: 1.15rem;
       color: var(--navy);
-      margin: 28px 0 10px;
+      margin: 24px 0 8px;
       padding-bottom: 8px;
       border-bottom: 1px solid var(--border);
+      text-align: left;
+      letter-spacing: normal;
     }
 
     .policy-card h3 {
-      font-size: 0.95rem;
+      font-size: 0.92rem;
       font-weight: 600;
       color: var(--navy);
-      margin: 20px 0 6px;
+      margin: 16px 0 4px;
     }
 
     .policy-card p {
       color: var(--muted);
-      font-size: 0.9rem;
+      font-size: 0.88rem;
       line-height: 1.8;
-      margin-bottom: 12px;
+      margin-bottom: 8px;
     }
 
     .policy-card ul {
       list-style: none;
-      margin: 8px 0 12px;
+      margin: 6px 0 10px;
     }
 
     .policy-card ul li {
       color: var(--muted);
-      font-size: 0.9rem;
-      padding: 5px 0 5px 20px;
+      font-size: 0.88rem;
+      padding: 4px 0 4px 18px;
       position: relative;
       line-height: 1.7;
     }
@@ -342,14 +337,13 @@
     .policy-card ul li::before {
       content: '·';
       position: absolute;
-      left: 6px;
+      left: 5px;
       color: var(--teal);
       font-weight: 700;
     }
 
     .policy-card strong { color: var(--text); }
 
-    /* FOOTER */
     footer {
       background: var(--navy);
       color: rgba(255,255,255,0.5);
@@ -377,8 +371,8 @@
     }
 
     .hero-badge, .hero h1, .hero p, .hero-cta { animation: fadeUp 0.6s ease both; }
-    .hero h1 { animation-delay: 0.1s; }
-    .hero p  { animation-delay: 0.2s; }
+    .hero h1  { animation-delay: 0.1s; }
+    .hero p   { animation-delay: 0.2s; }
     .hero-cta { animation-delay: 0.3s; }
   </style>
 </head>
@@ -386,7 +380,7 @@
 
   <nav>
     <a href="#" class="nav-logo">
-      <div class="nav-logo-icon">⊕</div>
+      <div class="nav-logo-icon">&#8853;</div>
       Equator
     </a>
     <ul class="nav-links">
@@ -397,10 +391,10 @@
   </nav>
 
   <div class="hero">
-    <div class="hero-badge">Equator – Expense Tracker</div>
-    <h1>We're here to<br><em>help you out</em></h1>
-    <p>Have a question or running into an issue? We'll get back to you as soon as we can.</p>
-    <a href="#support" class="hero-cta">✉ Contact Support</a>
+    <div class="hero-badge">Equator &ndash; Expense Tracker</div>
+    <h1>We&rsquo;re here to<br><em>help you out</em></h1>
+    <p>Have a question or running into an issue? We&rsquo;ll get back to you as soon as we can.</p>
+    <a href="#support" class="hero-cta">&#9993; Contact Support</a>
   </div>
 
   <main>
@@ -411,9 +405,9 @@
       <div class="contact-card">
         <div>
           <h3>Have a question?</h3>
-          <p>Send us an email and we'll get back to you. We typically respond within 1–2 business days.</p>
+          <p>Send us an email and we&rsquo;ll get back to you. We typically respond within 1&ndash;2 business days.</p>
         </div>
-        <div class="contact-email-display">✉ <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="563a39213a3734257832332016313b373f3a7835393b">[email&#160;protected]</a></div>
+        <div class="contact-email-display">&#9993; lowlabs.dev@gmail.com</div>
       </div>
     </section>
 
@@ -429,7 +423,7 @@
 
         <div class="faq-item">
           <button class="faq-question" onclick="toggleFaq(this)">How do I back up my data?<span class="faq-icon">+</span></button>
-          <div class="faq-answer">Go to Settings, then Data & Backup. From there you can export a backup file to your iCloud Drive or any location you choose. To restore, simply import the backup file from the same screen.</div>
+          <div class="faq-answer">Go to Settings, then Data &amp; Backup. From there you can export a backup file to your iCloud Drive or any location you choose. To restore, simply import the backup file from the same screen.</div>
         </div>
 
         <div class="faq-item">
@@ -466,11 +460,10 @@
   </main>
 
   <footer>
-    <p>© 2026 Equator &nbsp;·&nbsp; <span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="2d41425a414c4f5e0349485b6d4a404c4441034e4240">[email&#160;protected]</a></span></p>
+    <p>&copy; 2026 Equator &nbsp;&middot;&nbsp; <span>lowlabs.dev@gmail.com</span></p>
   </footer>
 
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-    // FAQ toggle
+  <script>
     function toggleFaq(btn) {
       const item = btn.closest('.faq-item');
       const isOpen = item.classList.contains('open');
@@ -478,7 +471,6 @@
       if (!isOpen) item.classList.add('open');
     }
 
-    // Fetch privacy policy from GitHub raw URL
     const POLICY_URL = 'https://raw.githubusercontent.com/LTTL97/equator-support/main/privacy-policy.md';
 
     async function loadPrivacyPolicy() {
@@ -493,13 +485,45 @@
       }
     }
 
-    // Simple markdown renderer
     function renderMarkdown(md) {
-      return md
-        .split('\n')
-        .map(line => {
-          if (line.startsWith('# '))  return `<h1>${line.slice(2)}</h1>`;
-          if (line.startsWith('## ')) return `<h2>${line.slice(3)}</h2>`;
-          if (line.startsWith('### ')) return `<h3>${line.slice(4)}</h3>`;
-          if (line.startsWith('- '))  return `<li>${inline(line.slice(2))}</li>`;
-          if (line.trim() === '')     return '<br>';
+      const lines = md.split('\n');
+      const output = [];
+      let i = 0;
+
+      while (i < lines.length) {
+        const line = lines[i];
+
+        if (line.startsWith('# '))   { output.push('<h1>' + inlineFormat(line.slice(2)) + '</h1>');  i++; continue; }
+        if (line.startsWith('## '))  { output.push('<h2>' + inlineFormat(line.slice(3)) + '</h2>');  i++; continue; }
+        if (line.startsWith('### ')) { output.push('<h3>' + inlineFormat(line.slice(4)) + '</h3>');  i++; continue; }
+
+        if (line.startsWith('- ')) {
+          const items = [];
+          while (i < lines.length && lines[i].startsWith('- ')) {
+            items.push('<li>' + inlineFormat(lines[i].slice(2)) + '</li>');
+            i++;
+          }
+          output.push('<ul>' + items.join('') + '</ul>');
+          continue;
+        }
+
+        if (line.trim() === '') { i++; continue; }
+
+        output.push('<p>' + inlineFormat(line) + '</p>');
+        i++;
+      }
+
+      return output.join('\n');
+    }
+
+    function inlineFormat(text) {
+      return text
+        .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+        .replace(/\*(.+?)\*/g, '<em>$1</em>');
+    }
+
+    loadPrivacyPolicy();
+  </script>
+
+</body>
+</html>
