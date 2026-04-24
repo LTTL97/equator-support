@@ -2,27 +2,27 @@
 
 Welcome to Equator: Expense Tracker (the "App"). This document governs your use of the App and outlines our privacy practices. By downloading, accessing, or using the App, you agree to be bound by these terms. If you do not agree, do not use the App.
 
-**1. Privacy Policy: Your Data is Yours**
+### **1. Privacy Policy: Your Data is Yours**
 
 We built Equator: Expense Tracker with strict privacy principles. We do not want your personal or financial data, and we do not have access to it.
 
-* **Local Storage:**
+**Local Storage:**
 
 All financial data, transactions, portfolios, categories, and accounts you enter into the App are stored entirely locally on your device using Apple's native database frameworks. We do not host your data on our servers, and we have no ability to view, access, or share it.
 
-* **iCloud Backup & Sync:**
+**iCloud Backup & Sync:**
 
 The App provides an optional backup feature that allows you to save and restore JSON snapshot files to your personal Apple iCloud Drive. These backups are initiated by you and stored in your private iCloud container. We do not have access to your iCloud account or its contents. Additionally, your device's operating system may automatically back up local app data to iCloud based on your personal iOS settings. We do not control iCloud; securing your Apple ID and managing your iCloud storage is your responsibility. To fully remove your data from iCloud, you may delete backups from within the App or directly from your iCloud Drive.
 
-* **Third-Party APIs and IP Addresses:**
+**Third-Party APIs and IP Addresses:**
 
 The App connects to the internet to fetch public, live currency exchange rates and financial market data (such as stock prices). When your device makes these requests to external servers, standard internet protocols dictate that your device's IP address and requested search queries (such as asset ticker symbols) are temporarily exposed to the third-party service provider. We do not control these third-party servers, we do not log this traffic, and this data is NEVER linked to your personal identity, portfolio balances, or local financial data. Use of third-party data services is subject to those providers' own terms and conditions.
 
-* **On-Device Intelligence:**
+**On-Device Intelligence:**
 
 The App uses Apple's on-device machine learning frameworks to provide convenience features such as automatic category suggestions. This processing occurs entirely on your device.
 
-* **AI Chat (Premium Feature):**
+**AI Chat (Premium Feature):**
 
 The AI chat feature sends your financial data from the last 6 months (including transaction amounts, dates, categories, notes, account names, and balances) to our secure server, which forwards the request to Google's Gemini API for processing. This data is sent only when you actively use the AI chat and is not stored on our server after processing. To enforce daily usage limits, our server temporarily holds an anonymous, vendor-scoped device identifier and request timestamps in volatile memory. This data is not written to disk, is not linked to your identity or financial data, and is automatically erased whenever the server restarts. Google may retain API request logs for up to 55 days for abuse monitoring and debugging purposes, after which they are automatically purged. These logs cannot be individually deleted on request before the retention period expires. As a paid API account, your data is not used for model training. Chat history is stored locally on your device and can be deleted at any time from the Data & Backup settings.
 
