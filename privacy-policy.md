@@ -2,7 +2,7 @@
 
 Welcome to Equator: Expense Tracker (the "App"). This document governs your use of the App and outlines our privacy practices. By downloading, accessing, or using the App, you agree to be bound by these terms. If you do not agree, do not use the App.
 
-###1. Privacy Policy: Your Data is Yours
+### 1. Privacy Policy: Your Data is Yours
 
 We built Equator: Expense Tracker with strict privacy principles. We do not want your personal or financial data, and we do not have access to it.
 
