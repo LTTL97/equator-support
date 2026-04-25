@@ -224,6 +224,20 @@
 
     .faq-list { display: flex; flex-direction: column; gap: 2px; }
 
+    .faq-category {
+      margin-top: 40px;
+      margin-bottom: 12px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--teal);
+      padding-left: 4px;
+    }
+
+    .faq-category:first-of-type { margin-top: 0; }
+
     .faq-item {
       background: var(--white);
       border-radius: 12px;
@@ -486,24 +500,65 @@
       <h2>FAQ</h2>
       <div class="faq-list">
 
+        <!-- ================= PRIVACY & DATA ================= -->
+        <div class="faq-category">Privacy &amp; Data</div>
+
         <div class="faq-item">
           <button class="faq-question" onclick="toggleFaq(this)">Is my financial data safe?<span class="faq-icon">+</span></button>
           <div class="faq-answer">Yes. Your transactions, accounts, budgets, and portfolio are stored entirely on your device. Your data is never transmitted to our servers <strong>except</strong> when you actively use the AI Chat feature, which sends your recent financial data to our server and Google&rsquo;s Gemini API to generate a response. Every other feature of the app works entirely offline. Full details are in the Privacy Policy below.</div>
         </div>
 
         <div class="faq-item">
-          <button class="faq-question" onclick="toggleFaq(this)">What does the AI Chat feature send to Google?<span class="faq-icon">+</span></button>
-          <div class="faq-answer">When you send a message in AI Chat, your transactions, accounts, budgets, and portfolio data from the last 6 months are transmitted to our server and forwarded to Google&rsquo;s Gemini API to generate a response. We do <strong>not</strong> send your name, email, Apple ID, IP address, or device identifier to Google. Our server does not store your data. You can disable AI Chat anytime in Settings &rarr; Privacy. For full details, see Section 1.7 of the Privacy Policy.</div>
+          <button class="faq-question" onclick="toggleFaq(this)">Do you have access to my transactions?<span class="faq-icon">+</span></button>
+          <div class="faq-answer">No. Your transaction data is stored in Apple&rsquo;s native database frameworks on your device and, at your option, in your personal iCloud Drive. We do not run a database that stores your financial data, and we have no way to read it. Even when you use AI Chat, the data passes through our server without being saved, and we cannot identify which requests belong to which user.</div>
         </div>
 
         <div class="faq-item">
-          <button class="faq-question" onclick="toggleFaq(this)">How do I back up my data?<span class="faq-icon">+</span></button>
-          <div class="faq-answer">Backup is available with <strong>Equator Pro</strong> or <strong>Equator Premium</strong>. Go to Settings &rarr; Data &amp; Backup to export a backup file to your iCloud Drive. To restore, import the same file from the same screen. Free users can still export transactions as CSV once they upgrade to Pro.</div>
+          <button class="faq-question" onclick="toggleFaq(this)">What data does the app send over the internet?<span class="faq-icon">+</span></button>
+          <div class="faq-answer">The app makes three kinds of network requests: <strong>(1)</strong> stock and currency price lookups from your device directly to third-party providers (these requests do not go through our server); <strong>(2)</strong> iCloud backup uploads to your own private iCloud Drive, which we cannot access; and <strong>(3)</strong> AI Chat requests, which transmit your recent financial data through our server to Google&rsquo;s Gemini API. Full details in Section 1 of the Privacy Policy below.</div>
         </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">Does Equator track me or use analytics?<span class="faq-icon">+</span></button>
+          <div class="faq-answer">No. Equator contains no third-party analytics or crash reporting SDKs (no Firebase, no Sentry, no Mixpanel, no Crashlytics). We don&rsquo;t use Apple&rsquo;s Advertising Identifier (IDFA) and there is no App Tracking Transparency prompt because the app has no need to track you. The only crash data that might reach us is through Apple&rsquo;s opt-in iOS analytics, which you control at the operating system level.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">Can other users see my data?<span class="faq-icon">+</span></button>
+          <div class="faq-answer">No. There is no account system, no login, no shared data. Every user&rsquo;s data lives only on their own device. There is no way for another Equator user, or anyone else, to see what you&rsquo;ve entered into the app.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">What happens to my data if I delete the app?<span class="faq-icon">+</span></button>
+          <div class="faq-answer">Deleting the app permanently removes all local data from your device, including transactions, accounts, budgets, portfolio, and chat history. If you saved a backup to iCloud Drive before deleting, that backup remains in your iCloud and can be restored later. We strongly recommend exporting a backup before uninstalling.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">How do I delete all my data?<span class="faq-icon">+</span></button>
+          <div class="faq-answer">Deleting the app from your device permanently removes all local data. To also remove backups, delete them from within the app&rsquo;s Data &amp; Backup settings or directly from your iCloud Drive. Because we do not have servers that store your personal financial data, there is nothing for us to delete on our end.</div>
+        </div>
+
+        <!-- ================= SUBSCRIPTIONS & PURCHASES ================= -->
+        <div class="faq-category">Subscriptions &amp; Purchases</div>
 
         <div class="faq-item">
           <button class="faq-question" onclick="toggleFaq(this)">What&rsquo;s included in each tier?<span class="faq-icon">+</span></button>
-          <div class="faq-answer"><strong>Free:</strong> up to 3 accounts, 3 budgets, 3 recurring transactions, 1 portfolio ticker (24h refresh), and 5 AI Chat prompts per day. <br><br><strong>Pro (one-time SGD 3.98):</strong> unlimited accounts, budgets, and recurring transactions. iCloud backup and CSV export unlocked. Same AI Chat and portfolio limits as Free. <br><br><strong>Premium (SGD 3.98/month):</strong> everything in Pro, plus 200 AI Chat prompts per day, unlimited portfolio tickers, and faster price refreshes (every 10 minutes).</div>
+          <div class="faq-answer"><strong>Free:</strong> up to 3 accounts, 3 budgets, 3 recurring transactions, 1 portfolio ticker (24-hour price refresh), and 5 AI Chat prompts per day. <br><br><strong>Pro (one-time SGD 3.98):</strong> unlimited accounts, budgets, and recurring transactions. iCloud backup and CSV export unlocked. Same AI Chat and portfolio limits as Free. <br><br><strong>Premium (SGD 3.98/month):</strong> everything in Pro, plus 200 AI Chat prompts per day, unlimited portfolio tickers, and faster portfolio price refreshes (every 10 minutes).</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">Is Pro a subscription?<span class="faq-icon">+</span></button>
+          <div class="faq-answer">No. Pro is a one-time purchase of SGD 3.98. You pay once and keep it forever on the Apple ID you purchased with. Only Premium is a monthly subscription.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">Does Pro include AI Chat?<span class="faq-icon">+</span></button>
+          <div class="faq-answer">Pro includes the same 5 AI Chat prompts per day that Free users get. To unlock 200 AI Chat prompts per day and other AI-related benefits, you need Premium.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">How do I upgrade to Pro or Premium?<span class="faq-icon">+</span></button>
+          <div class="faq-answer">Open Settings inside the app and tap Upgrade. The purchase is processed by Apple using your Apple ID. Pro users who later want Premium can upgrade from the same screen.</div>
         </div>
 
         <div class="faq-item">
@@ -512,28 +567,190 @@
         </div>
 
         <div class="faq-item">
-          <button class="faq-question" onclick="toggleFaq(this)">How do I restore my Pro purchase on a new device?<span class="faq-icon">+</span></button>
-          <div class="faq-answer">Go to Settings inside the app and tap Restore Purchases. Make sure you are signed in with the same Apple ID you used to purchase Pro originally. The same applies to active Premium subscriptions.</div>
-        </div>
-
-        <div class="faq-item">
           <button class="faq-question" onclick="toggleFaq(this)">How do I request a refund?<span class="faq-icon">+</span></button>
           <div class="faq-answer">All refunds are handled by Apple, not by us. Visit <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener" style="color:var(--teal);">reportaproblem.apple.com</a>, sign in with your Apple ID, find the purchase, and tap Request a Refund. We do not have the ability to issue refunds directly.</div>
         </div>
 
         <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">How do I restore my purchase on a new device?<span class="faq-icon">+</span></button>
+          <div class="faq-answer">Install Equator on the new device, open Settings in the app, and tap Restore Purchases. Make sure you&rsquo;re signed in with the same Apple ID you used to buy Pro or subscribe to Premium. Your data does not transfer automatically &mdash; use an iCloud backup to move transactions across devices.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">Is Family Sharing supported?<span class="faq-icon">+</span></button>
+          <div class="faq-answer">No, Family Sharing is not currently enabled for Pro or Premium. Each user needs their own purchase.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">What happens if I let my Premium subscription lapse?<span class="faq-icon">+</span></button>
+          <div class="faq-answer">You keep everything you&rsquo;ve entered. You simply lose access to Premium-only limits &mdash; the 200 AI Chat prompts per day reverts to 5, unlimited portfolio tickers reverts to 1, and the 10-minute refresh reverts to 24 hours. None of your existing data is deleted, hidden, or locked. Resubscribing restores the Premium limits immediately.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">What happens if I downgrade from Pro to Free?<span class="faq-icon">+</span></button>
+          <div class="faq-answer">Your existing data stays fully accessible and functional. If you have more than 3 accounts, budgets, or recurring transactions, they all continue to work normally &mdash; you just won&rsquo;t be able to create new ones beyond those limits until you re-upgrade. iCloud backup and CSV export will also be disabled until you re-upgrade.</div>
+        </div>
+
+        <!-- ================= USING THE APP ================= -->
+        <div class="faq-category">Using the App</div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">What account types are supported?<span class="faq-icon">+</span></button>
+          <div class="faq-answer">Equator supports seven account types: <strong>Cash</strong>, <strong>Bank Account</strong>, <strong>Savings Account</strong>, <strong>Investment Account</strong>, <strong>Prepaid Account</strong>, <strong>Debit Card</strong> (linked to a parent account), and <strong>Credit Card</strong> (with billing cycle tracking).</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">Can I track multiple currencies?<span class="faq-icon">+</span></button>
+          <div class="faq-answer">Yes. Each account can be set to its own currency, and you can enable multi-currency mode on a single account to hold balances in several currencies at once (useful for travel wallets or multi-currency savings accounts). The app converts balances to your home currency for overall summaries.</div>
+        </div>
+
+        <div class="faq-item">
           <button class="faq-question" onclick="toggleFaq(this)">What currencies does Equator support?<span class="faq-icon">+</span></button>
-          <div class="faq-answer">Equator supports a wide range of global currencies for your accounts and transactions. Live exchange rates are provided for your home currency plus 17 major world currencies. You can set your home currency in Settings &rarr; General.</div>
+          <div class="faq-answer">Equator supports a wide range of global currencies for your accounts and transactions. Exchange rates are provided for your home currency plus 17 major world currencies. You can set your home currency in Settings &rarr; General.</div>
         </div>
 
         <div class="faq-item">
-          <button class="faq-question" onclick="toggleFaq(this)">I deleted the app. Can I recover my data?<span class="faq-icon">+</span></button>
-          <div class="faq-answer">All your data is stored locally on your device, so deleting the app permanently removes it. If you saved a backup to iCloud Drive before deleting, you can reinstall and restore from that file. We strongly recommend exporting a backup regularly via Settings &rarr; Data &amp; Backup (requires Pro or Premium).</div>
+          <button class="faq-question" onclick="toggleFaq(this)">How do I change my home currency?<span class="faq-icon">+</span></button>
+          <div class="faq-answer">Go to Settings &rarr; General and select your home currency. All summary totals (net worth, spending, budgets) will be recalculated using live exchange rates. Your individual transactions stay in the currency they were recorded in.</div>
         </div>
 
         <div class="faq-item">
-          <button class="faq-question" onclick="toggleFaq(this)">How do I delete all my data?<span class="faq-icon">+</span></button>
-          <div class="faq-answer">Deleting the app from your device permanently removes all local data. To also remove backups, delete them from within the app&rsquo;s Data &amp; Backup settings or directly from your iCloud Drive. Because we do not have servers that store your personal financial data, there is nothing for us to delete on our end.</div>
+          <button class="faq-question" onclick="toggleFaq(this)">How do I set up a credit card with a billing cycle?<span class="faq-icon">+</span></button>
+          <div class="faq-answer">When you create a Credit Card account, you can set the billing cycle day (the day each month your statement closes) and the payment due days (how many days after cycle close the payment is due). Equator will automatically track your current cycle spend, previous cycle spend, and due dates. This data is all computed locally &mdash; we don&rsquo;t connect to your bank.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">How do recurring transactions work?<span class="faq-icon">+</span></button>
+          <div class="faq-answer">When you create a transaction, you can mark it as recurring with a frequency of Daily, Weekly, Monthly, or Yearly. Equator tracks all instances in the recurring series as a group so you can edit or delete them together. You can manage recurring transactions from Settings &rarr; Recurring.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">Can I track installment purchases?<span class="faq-icon">+</span></button>
+          <div class="faq-answer">Yes. When you create a transaction, you can mark it as an installment purchase and specify the total number of installments and interest rate. Equator will track your progress through the installment plan and can help you see your monthly commitment.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">Can I split a transaction across categories?<span class="faq-icon">+</span></button>
+          <div class="faq-answer">Not currently. Each transaction in Equator has one category and one subcategory. If you need to split a bill (e.g., groceries + household items from one receipt), record them as two separate transactions.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">Does Equator work offline?<span class="faq-icon">+</span></button>
+          <div class="faq-answer">Yes, for everything except features that need live data. You can add, edit, and view transactions, accounts, budgets, and most reports without any internet connection. Stock prices, currency exchange rates, AI Chat, and iCloud backup all require internet access.</div>
+        </div>
+
+        <!-- ================= BACKUPS & DATA MANAGEMENT ================= -->
+        <div class="faq-category">Backups &amp; Data Management</div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">How do I back up my data?<span class="faq-icon">+</span></button>
+          <div class="faq-answer">Backup is available with Pro or Premium. Go to Settings &rarr; Data &amp; Backup and tap Export Backup to save a JSON file to your iCloud Drive. Pro and Premium users can also enable automatic backups with configurable frequency. Your device&rsquo;s standard iOS/iCloud backup also includes Equator&rsquo;s data automatically, separately from this in-app backup.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">How do I restore a backup?<span class="faq-icon">+</span></button>
+          <div class="faq-answer">Go to Settings &rarr; Data &amp; Backup and tap Import Backup. Select the JSON file from your iCloud Drive. The app will replace your current data with the contents of the backup, so make sure you&rsquo;re restoring the right file.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">How do I move my data to a new phone?<span class="faq-icon">+</span></button>
+          <div class="faq-answer">The easiest way is to export a backup on your old phone, install Equator on the new phone, sign in with the same Apple ID, restore your purchases, and import the backup. Alternatively, if you&rsquo;ve restored your new phone from an iCloud backup of your old phone, Equator&rsquo;s data should already be there.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">Can I export my transactions to CSV?<span class="faq-icon">+</span></button>
+          <div class="faq-answer">Yes, with Pro or Premium. Go to Settings &rarr; Data &amp; Backup and tap Export to CSV. You can export transaction history or portfolio data. CSV files are standard spreadsheet format and can be opened in Numbers, Excel, or Google Sheets.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">Can I import data from another finance app?<span class="faq-icon">+</span></button>
+          <div class="faq-answer">Not currently. Equator does not have importers for other finance apps (like Mint, YNAB, or bank CSV exports). You would need to enter historical transactions manually. Built-in import may come in a future update.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">How often should I back up?<span class="faq-icon">+</span></button>
+          <div class="faq-answer">As often as your data matters to you. If you rely heavily on Equator for budgeting, weekly is a good cadence. Pro and Premium users can enable automatic backups to iCloud Drive. Because your data is stored only on your device, a lost or broken phone without a backup means lost data.</div>
+        </div>
+
+        <!-- ================= AI CHAT ================= -->
+        <div class="faq-category">AI Chat</div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">What is AI Chat?<span class="faq-icon">+</span></button>
+          <div class="faq-answer">AI Chat (&ldquo;Eqqie AI Assistant&rdquo;) is an in-app chatbot that can answer questions about your own financial data. Ask it things like &ldquo;How much did I spend on food last month?&rdquo; or &ldquo;What&rsquo;s my biggest expense category?&rdquo; and it will analyse your transactions to give you an answer. Responses are generated by Google&rsquo;s Gemini AI.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">What does AI Chat send to Google?<span class="faq-icon">+</span></button>
+          <div class="faq-answer">When you send a message in AI Chat, your transactions, accounts, budgets, and portfolio data from the last 6 months are transmitted to our server and forwarded to Google&rsquo;s Gemini API to generate a response. We do <strong>not</strong> send your name, email, Apple ID, IP address, or device identifier to Google. Our server does not store your data. For full details, see Section 1.7 of the Privacy Policy.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">How many AI Chat messages can I send?<span class="faq-icon">+</span></button>
+          <div class="faq-answer">Free and Pro users can send up to 5 AI Chat messages per day. Premium users can send up to 200 per day. The count resets every 24 hours.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">Why is there a daily limit?<span class="faq-icon">+</span></button>
+          <div class="faq-answer">Each AI Chat message costs us real money to send to Google&rsquo;s Gemini API. The daily limits keep the service sustainable as a solo developer. The Premium tier at SGD 3.98/month allows us to offer a much higher limit to users who rely on the feature.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">How do I disable AI Chat?<span class="faq-icon">+</span></button>
+          <div class="faq-answer">Go to Settings &rarr; Privacy and toggle off &ldquo;Enable AI Chat.&rdquo; This hides the AI Chat feature entirely and ensures no financial data will be sent off your device through AI Chat. You can re-enable it anytime.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">Is AI Chat financial advice?<span class="faq-icon">+</span></button>
+          <div class="faq-answer">No. AI Chat answers are for informational purposes only. Like any large language model, it can make mistakes &mdash; it might miscategorise a transaction, misread an amount, confuse income with expense, or draw incorrect conclusions. We are not licensed financial advisors. Always verify what AI Chat tells you against your actual records before making financial decisions.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">Why did AI Chat get my data wrong?<span class="faq-icon">+</span></button>
+          <div class="faq-answer">AI Chat responses are generated by Google&rsquo;s Gemini model, which is a general-purpose language model and not a deterministic calculator. It can misinterpret transactions, miscount amounts, or miss subtleties in your notes. Treat AI Chat as a smart helper that occasionally makes mistakes, not as a source of truth. For exact numbers, check your transaction list, account balances, or the built-in reports directly.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">Does AI Chat remember previous conversations?<span class="faq-icon">+</span></button>
+          <div class="faq-answer">Within a single conversation, yes &mdash; the app sends the last 20 messages with each new request so Google&rsquo;s model has context. Chat history is stored locally on your device and can be cleared at any time from Settings &rarr; Data &amp; Backup. Our server does not store any chat history.</div>
+        </div>
+
+        <!-- ================= TROUBLESHOOTING ================= -->
+        <div class="faq-category">Troubleshooting</div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">Stock prices aren&rsquo;t updating. What should I do?<span class="faq-icon">+</span></button>
+          <div class="faq-answer">First, check your internet connection. Then force-close the app and reopen it. Free and Pro users see prices refresh every 24 hours; Premium users refresh every 10 minutes. If prices still don&rsquo;t appear, the third-party market data service may be temporarily unavailable. Email us if the issue persists.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">My portfolio profit &amp; loss looks wrong.<span class="faq-icon">+</span></button>
+          <div class="faq-answer">Double-check the investment transactions you&rsquo;ve entered: the number of shares, average cost, and currency. P&amp;L is calculated as current market value minus invested amount. If exchange rates haven&rsquo;t refreshed recently, totals in your home currency may look off briefly. If you still think there&rsquo;s a bug, email us with a screenshot.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">AI Chat isn&rsquo;t working or says &ldquo;limit reached.&rdquo;<span class="faq-icon">+</span></button>
+          <div class="faq-answer">If you&rsquo;ve hit your daily limit (5 for Free/Pro, 200 for Premium), wait 24 hours for it to reset. If AI Chat returns errors despite having quota remaining, check your internet connection or try again in a few minutes &mdash; the AI service may be temporarily overloaded. Email us if it persists.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">My iCloud backup isn&rsquo;t showing up.<span class="faq-icon">+</span></button>
+          <div class="faq-answer">Check that you&rsquo;re signed in with the correct Apple ID, iCloud Drive is enabled on your device, and you have enough iCloud storage. Backups are saved to the Equator folder in iCloud Drive &mdash; you can browse to that folder in the Files app to verify the files exist. If the backup file is there but the app can&rsquo;t see it, wait a few minutes for iCloud sync, then try again.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">I bought Pro but it didn&rsquo;t unlock.<span class="faq-icon">+</span></button>
+          <div class="faq-answer">Go to Settings inside the app and tap Restore Purchases. Make sure you&rsquo;re signed in with the same Apple ID you used when buying Pro. If the restore doesn&rsquo;t work, check your purchase history at <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener" style="color:var(--teal);">reportaproblem.apple.com</a> to confirm the charge went through, then email us with your Apple receipt and we&rsquo;ll help.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">The app crashed or is behaving strangely.<span class="faq-icon">+</span></button>
+          <div class="faq-answer">Try force-closing the app and reopening it. If the issue persists, restart your device. If it still happens, email us with a description of what you were doing when it crashed and, if possible, a screenshot. Enabling Apple&rsquo;s iOS analytics (Settings &rarr; Privacy &amp; Security &rarr; Analytics &amp; Improvements &rarr; Share with App Developers) helps us see crash reports if one occurs.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">I found a bug or have a feature request.<span class="faq-icon">+</span></button>
+          <div class="faq-answer">Please email <a href="mailto:lowlabs.dev@gmail.com" style="color:var(--teal);">lowlabs.dev@gmail.com</a> with as much detail as you can &mdash; what you expected, what happened instead, screenshots if relevant. Equator is built by a solo developer with a full-time job, so allow up to a week for a reply. Feature requests are always welcome, though not everything can be built immediately.</div>
         </div>
 
       </div>
