@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Equator – Support</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy: #0f1f3d;
+      --teal: #2ec4b6;
+      --teal-light: #e8f9f7;
+      --cream: #fafaf7;
+      --text: #1a2e4a;
+      --muted: #6b7f99;
+      --border: #e2e8f0;
+      --white: #ffffff;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(250, 250, 247, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 16px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.3rem;
+      color: var(--navy);
+      text-decoration: none;
+    }
+
+    .nav-logo-icon {
+      width: 32px;
+      height: 32px;
+      background: var(--navy);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--teal);
+      font-size: 1rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--navy); }
+
+    .hero {
+      background: var(--navy);
+      color: var(--white);
+      padding: 100px 40px 80px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -100px; right: -100px;
+      width: 400px; height: 400px;
+      background: radial-gradient(circle, rgba(46,196,182,0.15) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -80px; left: -80px;
+      width: 300px; height: 300px;
+      background: radial-gradient(circle, rgba(46,196,182,0.1) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: rgba(46,196,182,0.15);
+      color: var(--teal);
+      border: 1px solid rgba(46,196,182,0.3);
+      border-radius: 100px;
+      padding: 6px 16px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+
+    .hero h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      line-height: 1.15;
+      margin-bottom: 16px;
+      letter-spacing: -0.02em;
+    }
+
+    .hero h1 em { font-style: italic; color: var(--teal); }
+
+    .hero p {
+      color: rgba(255,255,255,0.65);
+      font-size: 1.1rem;
+      max-width: 480px;
+      margin: 0 auto 40px;
+    }
+
+    .hero-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--teal);
+      color: var(--navy);
+      font-weight: 600;
+      font-size: 0.95rem;
+      padding: 14px 28px;
+      border-radius: 100px;
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .hero-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(46,196,182,0.3);
+    }
+
+    main {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 80px 40px;
+    }
+
+    section { margin-bottom: 80px; }
+
+    .section-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 12px;
+      text-align: center;
+    }
+
+    h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 2rem;
+      color: var(--navy);
+      margin-bottom: 32px;
+      letter-spacing: -0.02em;
+      text-align: center;
+    }
+
+    .contact-card {
+      background: var(--navy);
+      border-radius: 20px;
+      padding: 48px;
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+
+    .contact-card h3 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.6rem;
+      margin-bottom: 8px;
+    }
+
+    .contact-card p { color: rgba(255,255,255,0.6); font-size: 0.95rem; max-width: 360px; }
+
+    .contact-email-display {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--teal);
+      color: var(--navy);
+      font-weight: 600;
+      font-size: 0.95rem;
+      padding: 14px 24px;
+      border-radius: 100px;
+      white-space: nowrap;
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .contact-email-display:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(46,196,182,0.3);
+    }
+
+    .faq-list { display: flex; flex-direction: column; gap: 2px; }
+
+    .faq-item {
+      background: var(--white);
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      transition: border-color 0.2s;
+    }
+
+    .faq-item:hover { border-color: var(--teal); }
+
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 22px 28px;
+      text-align: left;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--navy);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .faq-icon {
+      width: 24px; height: 24px;
+      border-radius: 50%;
+      background: var(--teal-light);
+      color: var(--teal);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+      transition: transform 0.25s, background 0.2s;
+    }
+
+    .faq-item.open .faq-icon {
+      transform: rotate(45deg);
+      background: var(--teal);
+      color: var(--white);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease, padding 0.25s;
+      padding: 0 28px;
+      color: var(--muted);
+      font-size: 0.95rem;
+      line-height: 1.8;
+    }
+
+    .faq-item.open .faq-answer { max-height: 600px; padding: 0 28px 22px; }
+
+    .faq-answer strong { color: var(--text); }
+
+    .subscription-notice {
+      background: var(--teal-light);
+      border-left: 3px solid var(--teal);
+      border-radius: 8px;
+      padding: 20px 24px;
+      margin-top: 32px;
+      font-size: 0.88rem;
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    .subscription-notice strong { display: block; margin-bottom: 6px; color: var(--navy); }
+
+    .policy-card {
+      background: var(--white);
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      padding: 48px;
+    }
+
+    .policy-loading {
+      text-align: center;
+      color: var(--muted);
+      padding: 40px 0;
+      font-size: 0.95rem;
+    }
+
+    .policy-card h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.6rem;
+      color: var(--navy);
+      margin-bottom: 4px;
+      letter-spacing: -0.01em;
+    }
+
+    .policy-card h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.25rem;
+      color: var(--navy);
+      margin: 28px 0 10px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      text-align: left;
+      letter-spacing: normal;
+    }
+
+    .policy-card h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--navy);
+      margin: 20px 0 6px;
+    }
+
+    .policy-card p {
+      color: var(--muted);
+      font-size: 0.9rem;
+      line-height: 1.8;
+      margin-bottom: 10px;
+    }
+
+    .policy-card ul, .policy-card ol {
+      margin: 6px 0 12px 0;
+      padding-left: 0;
+      list-style: none;
+    }
+
+    .policy-card ul li, .policy-card ol li {
+      color: var(--muted);
+      font-size: 0.9rem;
+      padding: 4px 0 4px 20px;
+      position: relative;
+      line-height: 1.7;
+    }
+
+    .policy-card ul li::before {
+      content: '·';
+      position: absolute;
+      left: 6px;
+      top: 0;
+      color: var(--teal);
+      font-weight: 700;
+      font-size: 1.2rem;
+      line-height: 1.4;
+    }
+
+    .policy-card ol { counter-reset: olc; }
+    .policy-card ol li { counter-increment: olc; }
+    .policy-card ol li::before {
+      content: counter(olc) '.';
+      position: absolute;
+      left: 0;
+      color: var(--teal);
+      font-weight: 600;
+    }
+
+    .policy-card strong { color: var(--text); font-weight: 600; }
+    .policy-card em { font-style: italic; }
+
+    .policy-card a {
+      color: var(--teal);
+      text-decoration: none;
+      border-bottom: 1px dotted var(--teal);
+    }
+    .policy-card a:hover { color: var(--navy); border-bottom-color: var(--navy); }
+
+    .policy-card code {
+      background: var(--cream);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 0.82rem;
+      color: var(--navy);
+      font-family: 'SF Mono', Menlo, Consolas, monospace;
+    }
+
+    .policy-card hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 32px 0;
+    }
+
+    .policy-card blockquote {
+      border-left: 3px solid var(--teal);
+      padding: 8px 16px;
+      margin: 12px 0;
+      background: var(--cream);
+      color: var(--text);
+      font-size: 0.9rem;
+    }
+
+    footer {
+      background: var(--navy);
+      color: rgba(255,255,255,0.5);
+      text-align: center;
+      padding: 40px;
+      font-size: 0.85rem;
+    }
+
+    footer a { color: var(--teal); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    @media (max-width: 640px) {
+      nav { padding: 16px 20px; }
+      .nav-links { display: none; }
+      .hero { padding: 72px 24px 60px; }
+      main { padding: 60px 20px; }
+      .contact-card { padding: 32px 24px; }
+      .policy-card { padding: 28px 20px; }
+      .faq-question { padding: 18px 20px; }
+      .faq-item.open .faq-answer { padding: 0 20px 18px; }
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero-badge, .hero h1, .hero p, .hero-cta { animation: fadeUp 0.6s ease both; }
+    .hero h1  { animation-delay: 0.1s; }
+    .hero p   { animation-delay: 0.2s; }
+    .hero-cta { animation-delay: 0.3s; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="#" class="nav-logo">
+      <div class="nav-logo-icon">&#8853;</div>
+      Equator
+    </a>
+    <ul class="nav-links">
+      <li><a href="#support">Support</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#privacy">Privacy &amp; Terms</a></li>
+    </ul>
+  </nav>
+
+  <div class="hero">
+    <div class="hero-badge">Equator &ndash; Expense Tracker</div>
+    <h1>We&rsquo;re here to<br><em>help you out</em></h1>
+    <p>Have a question or running into an issue? Send us a note and we&rsquo;ll get back to you as soon as we can.</p>
+    <a href="mailto:lowlabs.dev@gmail.com" class="hero-cta">&#9993; Contact Support</a>
+  </div>
+
+  <main>
+
+    <section id="support">
+      <div class="section-label">Get in touch</div>
+      <h2>Support</h2>
+      <div class="contact-card">
+        <div>
+          <h3>Have a question?</h3>
+          <p>Equator is built by a solo developer with a full-time job, so please allow up to a week for a reply. Thank you for your patience.</p>
+        </div>
+        <a href="mailto:lowlabs.dev@gmail.com" class="contact-email-display">&#9993; lowlabs.dev@gmail.com</a>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="section-label">Common questions</div>
+      <h2>FAQ</h2>
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">Is my financial data safe?<span class="faq-icon">+</span></button>
+          <div class="faq-answer">Yes. Your transactions, accounts, budgets, and portfolio are stored entirely on your device. Your data is never transmitted to our servers <strong>except</strong> when you actively use the AI Chat feature, which sends your recent financial data to our server and Google&rsquo;s Gemini API to generate a response. Every other feature of the app works entirely offline. Full details are in the Privacy Policy below.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">What does the AI Chat feature send to Google?<span class="faq-icon">+</span></button>
+          <div class="faq-answer">When you send a message in AI Chat, your transactions, accounts, budgets, and portfolio data from the last 6 months are transmitted to our server and forwarded to Google&rsquo;s Gemini API to generate a response. We do <strong>not</strong> send your name, email, Apple ID, IP address, or device identifier to Google. Our server does not store your data. You can disable AI Chat anytime in Settings &rarr; Privacy. For full details, see Section 1.7 of the Privacy Policy.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">How do I back up my data?<span class="faq-icon">+</span></button>
+          <div class="faq-answer">Backup is available with <strong>Equator Pro</strong> or <strong>Equator Premium</strong>. Go to Settings &rarr; Data &amp; Backup to export a backup file to your iCloud Drive. To restore, import the same file from the same screen. Free users can still export transactions as CSV once they upgrade to Pro.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">What&rsquo;s included in each tier?<span class="faq-icon">+</span></button>
+          <div class="faq-answer"><strong>Free:</strong> up to 3 accounts, 3 budgets, 3 recurring transactions, 1 portfolio ticker (24h refresh), and 5 AI Chat prompts per day. <br><br><strong>Pro (one-time SGD 3.98):</strong> unlimited accounts, budgets, and recurring transactions. iCloud backup and CSV export unlocked. Same AI Chat and portfolio limits as Free. <br><br><strong>Premium (SGD 3.98/month):</strong> everything in Pro, plus 200 AI Chat prompts per day, unlimited portfolio tickers, and faster price refreshes (every 10 minutes).</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">How do I cancel my Premium subscription?<span class="faq-icon">+</span></button>
+          <div class="faq-answer">Premium is managed through Apple. Open your iPhone&rsquo;s Settings, tap your name at the top, tap Subscriptions, and select Equator Premium to cancel. You will continue to have access until the end of the current billing period. We cannot cancel subscriptions on your behalf.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">How do I restore my Pro purchase on a new device?<span class="faq-icon">+</span></button>
+          <div class="faq-answer">Go to Settings inside the app and tap Restore Purchases. Make sure you are signed in with the same Apple ID you used to purchase Pro originally. The same applies to active Premium subscriptions.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">How do I request a refund?<span class="faq-icon">+</span></button>
+          <div class="faq-answer">All refunds are handled by Apple, not by us. Visit <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener" style="color:var(--teal);">reportaproblem.apple.com</a>, sign in with your Apple ID, find the purchase, and tap Request a Refund. We do not have the ability to issue refunds directly.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">What currencies does Equator support?<span class="faq-icon">+</span></button>
+          <div class="faq-answer">Equator supports a wide range of global currencies for your accounts and transactions. Live exchange rates are provided for your home currency plus 17 major world currencies. You can set your home currency in Settings &rarr; General.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">I deleted the app. Can I recover my data?<span class="faq-icon">+</span></button>
+          <div class="faq-answer">All your data is stored locally on your device, so deleting the app permanently removes it. If you saved a backup to iCloud Drive before deleting, you can reinstall and restore from that file. We strongly recommend exporting a backup regularly via Settings &rarr; Data &amp; Backup (requires Pro or Premium).</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">How do I delete all my data?<span class="faq-icon">+</span></button>
+          <div class="faq-answer">Deleting the app from your device permanently removes all local data. To also remove backups, delete them from within the app&rsquo;s Data &amp; Backup settings or directly from your iCloud Drive. Because we do not have servers that store your personal financial data, there is nothing for us to delete on our end.</div>
+        </div>
+
+      </div>
+
+      <div class="subscription-notice">
+        <strong>Subscription terms</strong>
+        Equator Premium is a SGD 3.98/month auto-renewing subscription (or equivalent in your local currency). It renews automatically at the end of each monthly period unless cancelled at least 24 hours before the current period ends. Manage or cancel in your iPhone&rsquo;s Settings &rarr; [Your Name] &rarr; Subscriptions.
+      </div>
+    </section>
+
+    <section id="privacy">
+      <div class="section-label">Legal</div>
+      <h2>Privacy Policy &amp; Terms</h2>
+      <div class="policy-card" id="policy-card">
+        <div class="policy-loading">Loading privacy policy&hellip;</div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Low Timothy &middot; Lowlabs &nbsp;&middot;&nbsp; <a href="mailto:lowlabs.dev@gmail.com">lowlabs.dev@gmail.com</a></p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script>
+    function toggleFaq(btn) {
+      const item = btn.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    }
+
+    const POLICY_URL = 'https://raw.githubusercontent.com/LTTL97/equator-support/main/privacy_policy.md';
+
+    async function loadPrivacyPolicy() {
+      const card = document.getElementById('policy-card');
+      try {
+        const res = await fetch(POLICY_URL, { cache: 'no-cache' });
+        if (!res.ok) throw new Error('Failed to fetch');
+        const md = await res.text();
+
+        // Configure marked with safe defaults
+        marked.setOptions({
+          gfm: true,
+          breaks: false,
+          headerIds: false,
+          mangle: false
+        });
+
+        card.innerHTML = marked.parse(md);
+      } catch (e) {
+        card.innerHTML = '<p style="color:var(--muted);padding:20px 0;">Unable to load privacy policy. Please email <a href="mailto:lowlabs.dev@gmail.com" style="color:var(--teal);">lowlabs.dev@gmail.com</a> for a copy.</p>';
+      }
+    }
+
+    loadPrivacyPolicy();
+  </script>
+
+</body>
+</html>
