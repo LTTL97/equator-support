@@ -44,13 +44,15 @@ Your use of these third-party services is governed by their respective terms and
 
 The App offers three tiers of access:
 
-- **Free** — the default tier on installation. Includes up to 3 accounts, 3 budget categories, 3 recurring transaction groups, and up to 5 AI Chat requests per day. CSV export and iCloud backup are disabled. Portfolio tracking is limited to 1 active ticker with price refreshes every 24 hours.
-- **Equator Pro** — a one-time purchase of SGD 6.98 (or equivalent in your local currency). Includes everything in Free, plus: unlimited accounts, unlimited budget categories, unlimited recurring transaction groups, iCloud backup with configurable frequency, and CSV export for transaction history and portfolio. This purchase does not expire and is not a subscription. AI Chat and portfolio-related limits remain the same as Free.
-- **Equator Premium** — a monthly subscription of SGD 6.98 (or equivalent in your local currency). Includes everything in Pro, plus: a higher AI Chat daily limit (200 requests per day), unlimited portfolio tickers, and faster portfolio price refreshes (every 10 minutes instead of every 24 hours).
+- **Free** — the default tier on installation. Includes a limited number of accounts, budgets, and recurring transactions, with daily limits on AI Chat usage and limited portfolio tracking.
+- **Equator Pro** — a one-time purchase that unlocks unlimited accounts, unlimited budgets, unlimited recurring transactions, iCloud backup with configurable frequency, and CSV export for transaction history and portfolio. This purchase does not expire and is not a subscription. AI Chat and portfolio-related limits remain the same as Free.
+- **Equator Premium** — a monthly subscription that unlocks a higher AI Chat daily limit, unlimited portfolio tickers, and faster portfolio price refreshes.
+
+Current pricing for each tier is shown at the point of purchase in the App Store.
 
 All purchases are processed by Apple, not by us. We do not receive, store, or have access to your payment card details, billing address, Apple ID password, or any other financial information related to your purchase. Apple provides us only with anonymised transaction records and, in the case of Premium, subscription status information. StoreKit 2 verifies entitlements locally on your device; our server does not perform receipt validation.
 
-**Subscription management:** Your Premium subscription renews automatically at the start of each monthly period at the then-current price displayed in the App Store, unless you cancel through Apple's subscription management at least 24 hours before the current period ends. You can view, manage, or cancel your subscription at any time through your device's Settings → [Your Name] → Subscriptions. We cannot cancel or modify your subscription on your behalf.
+**Subscription management:** Your Premium subscription renews automatically at the start of each monthly period at the price displayed in the App Store at the time of purchase, unless you cancel through Apple's subscription management at least 24 hours before the current period ends. You can view, manage, or cancel your subscription at any time through your device's Settings → [Your Name] → Subscriptions. We cannot cancel or modify your subscription on your behalf.
 
 **Refunds:** All refund requests are handled by Apple in accordance with the Apple Media Services Terms and Conditions. To request a refund, visit [reportaproblem.apple.com](https://reportaproblem.apple.com). We do not have the ability to issue refunds directly.
 
