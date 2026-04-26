@@ -16,17 +16,14 @@
       --border: #e2e8f0;
       --white: #ffffff;
     }
-
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; }
-
     body {
       font-family: 'DM Sans', sans-serif;
       background: var(--cream);
       color: var(--text);
       line-height: 1.7;
     }
-
     nav {
       position: sticky;
       top: 0;
@@ -39,7 +36,6 @@
       align-items: center;
       justify-content: space-between;
     }
-
     .nav-logo {
       display: flex;
       align-items: center;
@@ -49,7 +45,6 @@
       color: var(--navy);
       text-decoration: none;
     }
-
     .nav-logo-icon {
       width: 32px;
       height: 32px;
@@ -61,13 +56,11 @@
       color: var(--teal);
       font-size: 1rem;
     }
-
     .nav-links {
       display: flex;
       gap: 32px;
       list-style: none;
     }
-
     .nav-links a {
       color: var(--muted);
       text-decoration: none;
@@ -75,9 +68,7 @@
       font-weight: 500;
       transition: color 0.2s;
     }
-
     .nav-links a:hover { color: var(--navy); }
-
     .hero {
       background: var(--navy);
       color: var(--white);
@@ -86,7 +77,6 @@
       position: relative;
       overflow: hidden;
     }
-
     .hero::before {
       content: '';
       position: absolute;
@@ -95,7 +85,6 @@
       background: radial-gradient(circle, rgba(46,196,182,0.15) 0%, transparent 70%);
       pointer-events: none;
     }
-
     .hero::after {
       content: '';
       position: absolute;
@@ -104,7 +93,6 @@
       background: radial-gradient(circle, rgba(46,196,182,0.1) 0%, transparent 70%);
       pointer-events: none;
     }
-
     .hero-badge {
       display: inline-block;
       background: rgba(46,196,182,0.15);
@@ -118,7 +106,6 @@
       text-transform: uppercase;
       margin-bottom: 24px;
     }
-
     .hero h1 {
       font-family: 'DM Serif Display', serif;
       font-size: clamp(2.5rem, 5vw, 4rem);
@@ -126,16 +113,13 @@
       margin-bottom: 16px;
       letter-spacing: -0.02em;
     }
-
     .hero h1 em { font-style: italic; color: var(--teal); }
-
     .hero p {
       color: rgba(255,255,255,0.65);
       font-size: 1.1rem;
       max-width: 480px;
       margin: 0 auto 40px;
     }
-
     .hero-cta {
       display: inline-flex;
       align-items: center;
@@ -149,20 +133,16 @@
       text-decoration: none;
       transition: transform 0.2s, box-shadow 0.2s;
     }
-
     .hero-cta:hover {
       transform: translateY(-2px);
       box-shadow: 0 8px 24px rgba(46,196,182,0.3);
     }
-
     main {
       max-width: 860px;
       margin: 0 auto;
       padding: 80px 40px;
     }
-
     section { margin-bottom: 80px; }
-
     .section-label {
       font-size: 0.75rem;
       font-weight: 600;
@@ -172,7 +152,6 @@
       margin-bottom: 12px;
       text-align: center;
     }
-
     h2 {
       font-family: 'DM Serif Display', serif;
       font-size: 2rem;
@@ -181,7 +160,6 @@
       letter-spacing: -0.02em;
       text-align: center;
     }
-
     .contact-card {
       background: var(--navy);
       border-radius: 20px;
@@ -193,15 +171,12 @@
       gap: 32px;
       flex-wrap: wrap;
     }
-
     .contact-card h3 {
       font-family: 'DM Serif Display', serif;
       font-size: 1.6rem;
       margin-bottom: 8px;
     }
-
     .contact-card p { color: rgba(255,255,255,0.6); font-size: 0.95rem; max-width: 360px; }
-
     .contact-email-display {
       display: inline-flex;
       align-items: center;
@@ -216,14 +191,11 @@
       text-decoration: none;
       transition: transform 0.2s, box-shadow 0.2s;
     }
-
     .contact-email-display:hover {
       transform: translateY(-2px);
       box-shadow: 0 8px 24px rgba(46,196,182,0.3);
     }
-
     .faq-list { display: flex; flex-direction: column; gap: 2px; }
-
     .faq-category {
       margin-top: 40px;
       margin-bottom: 12px;
@@ -235,9 +207,7 @@
       color: var(--teal);
       padding-left: 4px;
     }
-
     .faq-category:first-of-type { margin-top: 0; }
-
     .faq-item {
       background: var(--white);
       border-radius: 12px;
@@ -245,9 +215,7 @@
       border: 1px solid var(--border);
       transition: border-color 0.2s;
     }
-
     .faq-item:hover { border-color: var(--teal); }
-
     .faq-question {
       width: 100%;
       background: none;
@@ -264,7 +232,6 @@
       align-items: center;
       gap: 16px;
     }
-
     .faq-icon {
       width: 24px; height: 24px;
       border-radius: 50%;
@@ -277,13 +244,11 @@
       flex-shrink: 0;
       transition: transform 0.25s, background 0.2s;
     }
-
     .faq-item.open .faq-icon {
       transform: rotate(45deg);
       background: var(--teal);
       color: var(--white);
     }
-
     .faq-answer {
       max-height: 0;
       overflow: hidden;
@@ -293,11 +258,10 @@
       font-size: 0.95rem;
       line-height: 1.8;
     }
-
-    .faq-item.open .faq-answer { max-height: 600px; padding: 0 28px 22px; }
-
+    .faq-item.open .faq-answer { max-height: 800px; padding: 0 28px 22px; }
     .faq-answer strong { color: var(--text); }
-
+    .faq-answer a { color: var(--teal); text-decoration: none; border-bottom: 1px dotted var(--teal); }
+    .faq-answer a:hover { color: var(--navy); border-bottom-color: var(--navy); }
     .subscription-notice {
       background: var(--teal-light);
       border-left: 3px solid var(--teal);
@@ -308,23 +272,19 @@
       color: var(--text);
       line-height: 1.7;
     }
-
     .subscription-notice strong { display: block; margin-bottom: 6px; color: var(--navy); }
-
     .policy-card {
       background: var(--white);
       border-radius: 20px;
       border: 1px solid var(--border);
       padding: 48px;
     }
-
     .policy-loading {
       text-align: center;
       color: var(--muted);
       padding: 40px 0;
       font-size: 0.95rem;
     }
-
     .policy-card h1 {
       font-family: 'DM Serif Display', serif;
       font-size: 1.6rem;
@@ -332,7 +292,6 @@
       margin-bottom: 4px;
       letter-spacing: -0.01em;
     }
-
     .policy-card h2 {
       font-family: 'DM Serif Display', serif;
       font-size: 1.25rem;
@@ -343,27 +302,23 @@
       text-align: left;
       letter-spacing: normal;
     }
-
     .policy-card h3 {
       font-size: 1rem;
       font-weight: 600;
       color: var(--navy);
       margin: 20px 0 6px;
     }
-
     .policy-card p {
       color: var(--muted);
       font-size: 0.9rem;
       line-height: 1.8;
       margin-bottom: 10px;
     }
-
     .policy-card ul, .policy-card ol {
       margin: 6px 0 12px 0;
       padding-left: 0;
       list-style: none;
     }
-
     .policy-card ul li, .policy-card ol li {
       color: var(--muted);
       font-size: 0.9rem;
@@ -371,7 +326,6 @@
       position: relative;
       line-height: 1.7;
     }
-
     .policy-card ul li::before {
       content: '·';
       position: absolute;
@@ -382,7 +336,6 @@
       font-size: 1.2rem;
       line-height: 1.4;
     }
-
     .policy-card ol { counter-reset: olc; }
     .policy-card ol li { counter-increment: olc; }
     .policy-card ol li::before {
@@ -392,17 +345,14 @@
       color: var(--teal);
       font-weight: 600;
     }
-
     .policy-card strong { color: var(--text); font-weight: 600; }
     .policy-card em { font-style: italic; }
-
     .policy-card a {
       color: var(--teal);
       text-decoration: none;
       border-bottom: 1px dotted var(--teal);
     }
     .policy-card a:hover { color: var(--navy); border-bottom-color: var(--navy); }
-
     .policy-card code {
       background: var(--cream);
       padding: 2px 6px;
@@ -411,13 +361,11 @@
       color: var(--navy);
       font-family: 'SF Mono', Menlo, Consolas, monospace;
     }
-
     .policy-card hr {
       border: none;
       border-top: 1px solid var(--border);
       margin: 32px 0;
     }
-
     .policy-card blockquote {
       border-left: 3px solid var(--teal);
       padding: 8px 16px;
@@ -426,7 +374,6 @@
       color: var(--text);
       font-size: 0.9rem;
     }
-
     footer {
       background: var(--navy);
       color: rgba(255,255,255,0.5);
@@ -434,10 +381,8 @@
       padding: 40px;
       font-size: 0.85rem;
     }
-
     footer a { color: var(--teal); text-decoration: none; }
     footer a:hover { text-decoration: underline; }
-
     @media (max-width: 640px) {
       nav { padding: 16px 20px; }
       .nav-links { display: none; }
@@ -448,12 +393,10 @@
       .faq-question { padding: 18px 20px; }
       .faq-item.open .faq-answer { padding: 0 20px 18px; }
     }
-
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
-
     .hero-badge, .hero h1, .hero p, .hero-cta { animation: fadeUp 0.6s ease both; }
     .hero h1  { animation-delay: 0.1s; }
     .hero p   { animation-delay: 0.2s; }
@@ -461,7 +404,6 @@
   </style>
 </head>
 <body>
-
   <nav>
     <a href="#" class="nav-logo">
       <div class="nav-logo-icon">&#8853;</div>
@@ -473,16 +415,13 @@
       <li><a href="#privacy">Privacy &amp; Terms</a></li>
     </ul>
   </nav>
-
   <div class="hero">
     <div class="hero-badge">Equator &ndash; Expense Tracker</div>
     <h1>We&rsquo;re here to<br><em>help you out</em></h1>
     <p>Have a question or running into an issue? Send us a note and we&rsquo;ll get back to you as soon as we can.</p>
     <a href="mailto:lowlabs.dev@gmail.com" class="hero-cta">&#9993; Contact Support</a>
   </div>
-
   <main>
-
     <section id="support">
       <div class="section-label">Get in touch</div>
       <h2>Support</h2>
@@ -494,13 +433,11 @@
         <a href="mailto:lowlabs.dev@gmail.com" class="contact-email-display">&#9993; lowlabs.dev@gmail.com</a>
       </div>
     </section>
-
     <section id="faq">
       <div class="section-label">Common questions</div>
       <h2>FAQ</h2>
       <div class="faq-list">
 
-        <!-- ================= PRIVACY & DATA ================= -->
         <div class="faq-category">Privacy &amp; Data</div>
 
         <div class="faq-item">
@@ -538,17 +475,16 @@
           <div class="faq-answer">Deleting the app from your device permanently removes all local data. To also remove backups, delete them from within the app&rsquo;s Data &amp; Backup settings or directly from your iCloud Drive. Because we do not have servers that store your personal financial data, there is nothing for us to delete on our end.</div>
         </div>
 
-        <!-- ================= SUBSCRIPTIONS & PURCHASES ================= -->
         <div class="faq-category">Subscriptions &amp; Purchases</div>
 
         <div class="faq-item">
           <button class="faq-question" onclick="toggleFaq(this)">What&rsquo;s included in each tier?<span class="faq-icon">+</span></button>
-          <div class="faq-answer"><strong>Free:</strong> up to 3 accounts, 3 budgets, 3 recurring transactions, 1 portfolio ticker (24-hour price refresh), and 5 AI Chat prompts per day. <br><br><strong>Pro (one-time SGD 3.98):</strong> unlimited accounts, budgets, and recurring transactions. iCloud backup and CSV export unlocked. Same AI Chat and portfolio limits as Free. <br><br><strong>Premium (SGD 3.98/month):</strong> everything in Pro, plus 200 AI Chat prompts per day, unlimited portfolio tickers, and faster portfolio price refreshes (every 10 minutes).</div>
+          <div class="faq-answer"><strong>Free:</strong> up to 3 accounts, 3 budgets, 3 recurring transactions, 1 portfolio ticker (24-hour price refresh), and 5 AI Chat prompts per day. <br><br><strong>Pro (one-time SGD 6.98):</strong> unlimited accounts, budgets, and recurring transactions. iCloud backup and CSV export unlocked. Same AI Chat and portfolio limits as Free. <br><br><strong>Premium (SGD 6.98/month):</strong> everything in Pro, plus 200 AI Chat prompts per day, unlimited portfolio tickers, and faster portfolio price refreshes (every 10 minutes).</div>
         </div>
 
         <div class="faq-item">
           <button class="faq-question" onclick="toggleFaq(this)">Is Pro a subscription?<span class="faq-icon">+</span></button>
-          <div class="faq-answer">No. Pro is a one-time purchase of SGD 3.98. You pay once and keep it forever on the Apple ID you purchased with. Only Premium is a monthly subscription.</div>
+          <div class="faq-answer">No. Pro is a one-time purchase of SGD 6.98. You pay once and keep it forever on the Apple ID you purchased with. Only Premium is a monthly subscription.</div>
         </div>
 
         <div class="faq-item">
@@ -568,12 +504,12 @@
 
         <div class="faq-item">
           <button class="faq-question" onclick="toggleFaq(this)">How do I request a refund?<span class="faq-icon">+</span></button>
-          <div class="faq-answer">All refunds are handled by Apple, not by us. Visit <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener" style="color:var(--teal);">reportaproblem.apple.com</a>, sign in with your Apple ID, find the purchase, and tap Request a Refund. We do not have the ability to issue refunds directly.</div>
+          <div class="faq-answer">All refunds are handled by Apple, not by us. Visit <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a>, sign in with your Apple ID, find the purchase, and tap Request a Refund. We do not have the ability to issue refunds directly.</div>
         </div>
 
         <div class="faq-item">
           <button class="faq-question" onclick="toggleFaq(this)">How do I restore my purchase on a new device?<span class="faq-icon">+</span></button>
-          <div class="faq-answer">Install Equator on the new device, open Settings in the app, and tap Restore Purchases. Make sure you&rsquo;re signed in with the same Apple ID you used to buy Pro or subscribe to Premium. Your data does not transfer automatically &mdash; use an iCloud backup to move transactions across devices.</div>
+          <div class="faq-answer">Install Equator on the new device, open Settings in the app, and tap Restore Purchases. Make sure you&rsquo;re signed in with the same Apple ID you used to buy Pro or subscribe to Premium. Your data does not transfer automatically. Use an iCloud backup to move transactions across devices.</div>
         </div>
 
         <div class="faq-item">
@@ -583,15 +519,14 @@
 
         <div class="faq-item">
           <button class="faq-question" onclick="toggleFaq(this)">What happens if I let my Premium subscription lapse?<span class="faq-icon">+</span></button>
-          <div class="faq-answer">You keep everything you&rsquo;ve entered. You simply lose access to Premium-only limits &mdash; the 200 AI Chat prompts per day reverts to 5, unlimited portfolio tickers reverts to 1, and the 10-minute refresh reverts to 24 hours. None of your existing data is deleted, hidden, or locked. Resubscribing restores the Premium limits immediately.</div>
+          <div class="faq-answer">You keep everything you&rsquo;ve entered. You simply lose access to Premium-only limits. The 200 AI Chat prompts per day reverts to 5, unlimited portfolio tickers reverts to 1, and the 10-minute refresh reverts to 24 hours. None of your existing data is deleted, hidden, or locked. Resubscribing restores the Premium limits immediately.</div>
         </div>
 
         <div class="faq-item">
           <button class="faq-question" onclick="toggleFaq(this)">What happens if I downgrade from Pro to Free?<span class="faq-icon">+</span></button>
-          <div class="faq-answer">Your existing data stays fully accessible and functional. If you have more than 3 accounts, budgets, or recurring transactions, they all continue to work normally &mdash; you just won&rsquo;t be able to create new ones beyond those limits until you re-upgrade. iCloud backup and CSV export will also be disabled until you re-upgrade.</div>
+          <div class="faq-answer">Your existing data stays fully accessible and functional. If you have more than 3 accounts, budgets, or recurring transactions, they all continue to work normally. You just won&rsquo;t be able to create new ones beyond those limits until you re-upgrade. iCloud backup and CSV export will also be disabled until you re-upgrade.</div>
         </div>
 
-        <!-- ================= USING THE APP ================= -->
         <div class="faq-category">Using the App</div>
 
         <div class="faq-item">
@@ -606,7 +541,7 @@
 
         <div class="faq-item">
           <button class="faq-question" onclick="toggleFaq(this)">What currencies does Equator support?<span class="faq-icon">+</span></button>
-          <div class="faq-answer">Equator supports a wide range of global currencies for your accounts and transactions. Exchange rates are provided for your home currency plus 17 major world currencies. You can set your home currency in Settings &rarr; General.</div>
+          <div class="faq-answer">Equator supports 150+ world currencies (the full ISO 4217 set) for your accounts and transactions. Live exchange rates are fetched daily. You can set your home currency in Settings &rarr; General.</div>
         </div>
 
         <div class="faq-item">
@@ -616,7 +551,7 @@
 
         <div class="faq-item">
           <button class="faq-question" onclick="toggleFaq(this)">How do I set up a credit card with a billing cycle?<span class="faq-icon">+</span></button>
-          <div class="faq-answer">When you create a Credit Card account, you can set the billing cycle day (the day each month your statement closes) and the payment due days (how many days after cycle close the payment is due). Equator will automatically track your current cycle spend, previous cycle spend, and due dates. This data is all computed locally &mdash; we don&rsquo;t connect to your bank.</div>
+          <div class="faq-answer">When you create a Credit Card account, you can set the billing cycle day (the day each month your statement closes) and the payment due days (how many days after cycle close the payment is due). Equator will automatically track your current cycle spend, previous cycle spend, and due dates. This data is all computed locally. We don&rsquo;t connect to your bank.</div>
         </div>
 
         <div class="faq-item">
@@ -631,7 +566,7 @@
 
         <div class="faq-item">
           <button class="faq-question" onclick="toggleFaq(this)">Can I split a transaction across categories?<span class="faq-icon">+</span></button>
-          <div class="faq-answer">Not currently. Each transaction in Equator has one category and one subcategory. If you need to split a bill (e.g., groceries + household items from one receipt), record them as two separate transactions.</div>
+          <div class="faq-answer">Not currently. Each transaction in Equator has one category and one subcategory. If you need to split a bill (e.g., groceries and household items from one receipt), record them as two separate transactions.</div>
         </div>
 
         <div class="faq-item">
@@ -639,7 +574,6 @@
           <div class="faq-answer">Yes, for everything except features that need live data. You can add, edit, and view transactions, accounts, budgets, and most reports without any internet connection. Stock prices, currency exchange rates, AI Chat, and iCloud backup all require internet access.</div>
         </div>
 
-        <!-- ================= BACKUPS & DATA MANAGEMENT ================= -->
         <div class="faq-category">Backups &amp; Data Management</div>
 
         <div class="faq-item">
@@ -664,7 +598,7 @@
 
         <div class="faq-item">
           <button class="faq-question" onclick="toggleFaq(this)">Can I import data from another finance app?<span class="faq-icon">+</span></button>
-          <div class="faq-answer">Not currently. Equator does not have importers for other finance apps (like Mint, YNAB, or bank CSV exports). You would need to enter historical transactions manually. Built-in import may come in a future update.</div>
+          <div class="faq-answer">Not currently. Equator does not have importers for other finance apps or bank CSV exports. You would need to enter historical transactions manually. Built-in import may come in a future update.</div>
         </div>
 
         <div class="faq-item">
@@ -672,12 +606,11 @@
           <div class="faq-answer">As often as your data matters to you. If you rely heavily on Equator for budgeting, weekly is a good cadence. Pro and Premium users can enable automatic backups to iCloud Drive. Because your data is stored only on your device, a lost or broken phone without a backup means lost data.</div>
         </div>
 
-        <!-- ================= AI CHAT ================= -->
         <div class="faq-category">AI Chat</div>
 
         <div class="faq-item">
           <button class="faq-question" onclick="toggleFaq(this)">What is AI Chat?<span class="faq-icon">+</span></button>
-          <div class="faq-answer">AI Chat (&ldquo;Eqqie AI Assistant&rdquo;) is an in-app chatbot that can answer questions about your own financial data. Ask it things like &ldquo;How much did I spend on food last month?&rdquo; or &ldquo;What&rsquo;s my biggest expense category?&rdquo; and it will analyse your transactions to give you an answer. Responses are generated by Google&rsquo;s Gemini AI.</div>
+          <div class="faq-answer">AI Chat (&ldquo;Eqqie AI Assistant&rdquo;) is an in-app chatbot that can answer questions about your own financial data and help you manage it. Ask it things like &ldquo;How much did I spend on food last month?&rdquo; or &ldquo;Add a 12 lunch expense.&rdquo; Eqqie can also propose creating, editing, or deleting transactions and managing budgets, but every proposed change must be confirmed by you before it takes effect. Responses are generated by Google&rsquo;s Gemini AI.</div>
         </div>
 
         <div class="faq-item">
@@ -692,7 +625,7 @@
 
         <div class="faq-item">
           <button class="faq-question" onclick="toggleFaq(this)">Why is there a daily limit?<span class="faq-icon">+</span></button>
-          <div class="faq-answer">Each AI Chat message costs us real money to send to Google&rsquo;s Gemini API. The daily limits keep the service sustainable as a solo developer. The Premium tier at SGD 3.98/month allows us to offer a much higher limit to users who rely on the feature.</div>
+          <div class="faq-answer">Each AI Chat message costs us real money to send to Google&rsquo;s Gemini API. The daily limits keep the service sustainable as a solo developer. Premium subscribers fund a much higher limit for users who rely on the feature.</div>
         </div>
 
         <div class="faq-item">
@@ -702,7 +635,7 @@
 
         <div class="faq-item">
           <button class="faq-question" onclick="toggleFaq(this)">Is AI Chat financial advice?<span class="faq-icon">+</span></button>
-          <div class="faq-answer">No. AI Chat answers are for informational purposes only. Like any large language model, it can make mistakes &mdash; it might miscategorise a transaction, misread an amount, confuse income with expense, or draw incorrect conclusions. We are not licensed financial advisors. Always verify what AI Chat tells you against your actual records before making financial decisions.</div>
+          <div class="faq-answer">No. AI Chat answers are for informational purposes only. Like any large language model, it can make mistakes. It might miscategorise a transaction, misread an amount, confuse income with expense, or draw incorrect conclusions. We are not licensed financial advisors. Always verify what AI Chat tells you against your actual records before making financial decisions.</div>
         </div>
 
         <div class="faq-item">
@@ -712,10 +645,9 @@
 
         <div class="faq-item">
           <button class="faq-question" onclick="toggleFaq(this)">Does AI Chat remember previous conversations?<span class="faq-icon">+</span></button>
-          <div class="faq-answer">Within a single conversation, yes &mdash; the app sends the last 20 messages with each new request so Google&rsquo;s model has context. Chat history is stored locally on your device and can be cleared at any time from Settings &rarr; Data &amp; Backup. Our server does not store any chat history.</div>
+          <div class="faq-answer">Within a single conversation, yes. The app sends the last 20 messages with each new request so Google&rsquo;s model has context. Chat history is stored locally on your device and can be cleared at any time from Settings &rarr; Data &amp; Backup. Our server does not store any chat history.</div>
         </div>
 
-        <!-- ================= TROUBLESHOOTING ================= -->
         <div class="faq-category">Troubleshooting</div>
 
         <div class="faq-item">
@@ -724,23 +656,23 @@
         </div>
 
         <div class="faq-item">
-          <button class="faq-question" onclick="toggleFaq(this)">My portfolio profit &amp; loss looks wrong.<span class="faq-icon">+</span></button>
+          <button class="faq-question" onclick="toggleFaq(this)">My portfolio profit and loss looks wrong.<span class="faq-icon">+</span></button>
           <div class="faq-answer">Double-check the investment transactions you&rsquo;ve entered: the number of shares, average cost, and currency. P&amp;L is calculated as current market value minus invested amount. If exchange rates haven&rsquo;t refreshed recently, totals in your home currency may look off briefly. If you still think there&rsquo;s a bug, email us with a screenshot.</div>
         </div>
 
         <div class="faq-item">
           <button class="faq-question" onclick="toggleFaq(this)">AI Chat isn&rsquo;t working or says &ldquo;limit reached.&rdquo;<span class="faq-icon">+</span></button>
-          <div class="faq-answer">If you&rsquo;ve hit your daily limit (5 for Free/Pro, 200 for Premium), wait 24 hours for it to reset. If AI Chat returns errors despite having quota remaining, check your internet connection or try again in a few minutes &mdash; the AI service may be temporarily overloaded. Email us if it persists.</div>
+          <div class="faq-answer">If you&rsquo;ve hit your daily limit (5 for Free/Pro, 200 for Premium), wait for it to reset. If AI Chat returns errors despite having quota remaining, check your internet connection or try again in a few minutes. The AI service may be temporarily overloaded. Email us if it persists.</div>
         </div>
 
         <div class="faq-item">
           <button class="faq-question" onclick="toggleFaq(this)">My iCloud backup isn&rsquo;t showing up.<span class="faq-icon">+</span></button>
-          <div class="faq-answer">Check that you&rsquo;re signed in with the correct Apple ID, iCloud Drive is enabled on your device, and you have enough iCloud storage. Backups are saved to the Equator folder in iCloud Drive &mdash; you can browse to that folder in the Files app to verify the files exist. If the backup file is there but the app can&rsquo;t see it, wait a few minutes for iCloud sync, then try again.</div>
+          <div class="faq-answer">Check that you&rsquo;re signed in with the correct Apple ID, iCloud Drive is enabled on your device, and you have enough iCloud storage. Backups are saved to the Equator folder in iCloud Drive. You can browse to that folder in the Files app to verify the files exist. If the backup file is there but the app can&rsquo;t see it, wait a few minutes for iCloud sync, then try again.</div>
         </div>
 
         <div class="faq-item">
           <button class="faq-question" onclick="toggleFaq(this)">I bought Pro but it didn&rsquo;t unlock.<span class="faq-icon">+</span></button>
-          <div class="faq-answer">Go to Settings inside the app and tap Restore Purchases. Make sure you&rsquo;re signed in with the same Apple ID you used when buying Pro. If the restore doesn&rsquo;t work, check your purchase history at <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener" style="color:var(--teal);">reportaproblem.apple.com</a> to confirm the charge went through, then email us with your Apple receipt and we&rsquo;ll help.</div>
+          <div class="faq-answer">Go to Settings inside the app and tap Restore Purchases. Make sure you&rsquo;re signed in with the same Apple ID you used when buying Pro. If the restore doesn&rsquo;t work, check your purchase history at <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a> to confirm the charge went through, then email us with your Apple receipt and we&rsquo;ll help.</div>
         </div>
 
         <div class="faq-item">
@@ -750,14 +682,14 @@
 
         <div class="faq-item">
           <button class="faq-question" onclick="toggleFaq(this)">I found a bug or have a feature request.<span class="faq-icon">+</span></button>
-          <div class="faq-answer">Please email <a href="mailto:lowlabs.dev@gmail.com" style="color:var(--teal);">lowlabs.dev@gmail.com</a> with as much detail as you can &mdash; what you expected, what happened instead, screenshots if relevant. Equator is built by a solo developer with a full-time job, so allow up to a week for a reply. Feature requests are always welcome, though not everything can be built immediately.</div>
+          <div class="faq-answer">Please email <a href="mailto:lowlabs.dev@gmail.com">lowlabs.dev@gmail.com</a> with as much detail as you can: what you expected, what happened instead, screenshots if relevant. Equator is built by a solo developer with a full-time job, so allow up to a week for a reply. Feature requests are always welcome, though not everything can be built immediately.</div>
         </div>
 
       </div>
 
       <div class="subscription-notice">
         <strong>Subscription terms</strong>
-        Equator Premium is a SGD 3.98/month auto-renewing subscription (or equivalent in your local currency). It renews automatically at the end of each monthly period unless cancelled at least 24 hours before the current period ends. Manage or cancel in your iPhone&rsquo;s Settings &rarr; [Your Name] &rarr; Subscriptions.
+        Equator Premium is a SGD 6.98/month auto-renewing subscription (or equivalent in your local currency). It renews automatically at the end of each monthly period unless cancelled at least 24 hours before the current period ends. Manage or cancel in your iPhone&rsquo;s Settings &rarr; [Your Name] &rarr; Subscriptions.
       </div>
     </section>
 
@@ -768,7 +700,6 @@
         <div class="policy-loading">Loading privacy policy&hellip;</div>
       </div>
     </section>
-
   </main>
 
   <footer>
@@ -784,7 +715,7 @@
       if (!isOpen) item.classList.add('open');
     }
 
-    const POLICY_URL = 'https://raw.githubusercontent.com/LTTL97/equator-support/main/privacy-policy.md';
+    const POLICY_URL = 'https://raw.githubusercontent.com/LTTL97/equator-support/main/privacy_policy.md';
 
     async function loadPrivacyPolicy() {
       const card = document.getElementById('policy-card');
@@ -793,7 +724,6 @@
         if (!res.ok) throw new Error('Failed to fetch');
         const md = await res.text();
 
-        // Configure marked with safe defaults
         marked.setOptions({
           gfm: true,
           breaks: false,
